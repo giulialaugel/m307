@@ -6,7 +6,7 @@ body{
     font-family:'Hind Siliguri', sans-serif;!important; /* geht nicht, wird vom system überschrieben*/
     font-size: 3rem;!important;
 }
-#lustSommer{
+.geschwungen{
     font-family:'Pacifico', sans-serif;
     font-weight: 400;
     font-size: 30px;
@@ -156,11 +156,13 @@ h3{
 }
 .newsletter{
     text-align: center;
+    color: #EEEEEE;
     margin-top: 50px;
     margin-bottom:50px;
     padding-top: 50px;
     padding-bottom:50px;
-    border-style: dotted;
-    border-width: medium;
-    border-color: #1F2B33;
+    background-image: url("grafiken/fotos/banner.jpg");
+}
+.container{
+    margin-bottom: 20px;
 }
