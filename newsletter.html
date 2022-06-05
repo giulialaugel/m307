@@ -52,53 +52,85 @@
             <!--platzhalter Seiten-->
             <div class="col-4"></div>
             <!--formular-->
-            <div class="col-4">
-                <form id="form">
-                    <div class="form-row">
-                        <div class="container">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Divers</label>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <form class="needs-validation" novalidate>
+                            <div class="form-group radio">
+
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="divers" name="cutlery" class="custom-control-input" required>
+                                    <label class="custom-control-label" for="divers">Divers</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="frau" name="cutlery" class="custom-control-input" required>
+                                    <label class="custom-control-label" for="frau">Frau</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="mann" name="cutlery" class="custom-control-input" required>
+                                    <label class="custom-control-label" for="mann">Mann</label>
+                                </div>
+                                <div class="valid-feedback">
+                                </div>
+                                <div class="invalid-feedback">
+                                </div>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Frau</label>
+
+                            <div class="form-group">
+                                <label for="vorname">Vorname*</label>
+                                <input type="text" class="form-control" id="vorname" minlength="2" maxlength="10" required>
+                                <div class="invalid-feedback">
+                                    Bitte gib Deinen Vornamen ein.
+                                </div>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                <label class="form-check-label" for="inlineRadio3">Herr</label>
+
+                            <div class="form-group">
+                                <label for="nachname">Nachnamen*</label>
+                                <input type="text" class="form-control" id="nachname" minlength="2" maxlength="15" required>
+                                <div class="invalid-feedback">
+                                    Bitte gib Deinen Nachnamen ein.
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group col-md-6">Vorname
-                            <input id ="vorname" type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group col-md-6">Nachname
-                            <input id ="nachname" type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" required>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="exampleFormControlSelect1">Was ist dein Lieblings Franklin® Tonic?</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>brewed ginger beer</option>
-                                <option>1886 cola</option>
-                                <option>elderflower tonic water with cucumber</option>
-                                <option>rhubarb tonic water with hibiscus</option>
-                                <option>rosemary tonic water with black olive</option>
-                                <option>sicilian lemon tonic water</option>
-                            </select>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                            <label class="form-check-label" for="exampleCheck1">Ich habe die AGBs verstanden.</label>
-                        </div>
-                        <div class="btn-group-1 col-md-12">
-                            <button type="submit" class="btn btn-lg btn-dark">absenden</button>
-                        </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail*</label>
+                                <input type="email" class="form-control" id="email" maxlength="20" required>
+                                <div class="invalid-feedback">
+                                    Bitte gib eine gültige E-mail ein.
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Was ist dein Lieblings Franklin® Tonic?</label>
+                                <select class="custom-select" required>
+                                    <option value="">wähle ein Getränk</option>
+                                    <option value="1">brewed ginger beer</option>
+                                    <option value="2">1886 cola</option>
+                                    <option value="3">elderflower tonic water with cucumber</option>
+                                    <option value="4">rhubarb tonic water with hibiscus</option>
+                                    <option value="5">rosemary tonic water with black olive</option>
+                                    <option value="6">sicilian lemon tonic water</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    Sieht gut aus!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Bitte wähle eins aus.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" class="form-check-input" required>
+                                <label>Ich habe die AGBs verstanden.</label>
+                                <div class="invalid-feedback">
+                                    Bitte setze einen Hacken.
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </form>
                     </div>
-                </form>
+                </div>
+            </div>
                 <script src="script/validate-inputs.js"></script>
             </div>
             <!--platzhalter Seiten-->

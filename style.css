@@ -163,16 +163,12 @@ h3{
     padding-bottom:50px;
     background-image: url("grafiken/fotos/banner.jpg");
 }
-.container{
+.form-control{
     margin-bottom: 20px;
 }
-:root{
-    --success-color:#7cbf75;
-    --error-color:#f55151;
+.radio{
+    display: flex;
 }
-.form-control.success input{
-    border-bottom-color: var(--success-color);
-}
-.form-control.error input{
-    border-bottom-color: var(--error-color);
+.custom-radio{
+    padding-right:100px;
 }
