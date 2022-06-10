@@ -1,0 +1,26 @@
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "description": "ICT-Modul_307",
+  "main": "server.js",
+  "scripts": {
+    "server": "node script/server.js",
+    "watch": "nodemon script/server.js"
+  },
+  "keywords": [
+    "Mediamatiker",
+    "m307",
+    "ICT",
+    "javascript"
+  ],
+  "author": "ewertl@bzz.ch",
+  "license": "ISC",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "body-parser": "^1.19.0",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.1"
+  }
+}
