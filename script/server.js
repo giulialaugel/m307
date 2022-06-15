@@ -11,8 +11,10 @@ const server = app.listen(port);
 console.log(`Running at Port ${port}`);
 server.timeout = 1000 * 60 * 2; // 2 minutes
 
+let data = [];
+
 //body parser
-app.use(bodyparser.urlencoded())
+// app.use(bodyparser.urlencoded())
 app.use(bodyparser.urlencoded({extended:true}))
 
 // Use middleware to set the default Content-Type
@@ -23,11 +25,15 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.get('/data', (req, res) => {
+    res.send(data)
+})
 //Das kommt bei Postman als info für mich raus
 //nur unter validate (dem Pfad) wird die Funktion ausgeführt
 app.post("/validate",(req,res)=>{
     const {radio, vorname, nachname, email, dropdown, agb} = req.body;
     const errors = {};
+
     //Validierung
     if (
         !vorname || vorname.length<2 || vorname.length>10
@@ -73,9 +79,25 @@ app.post("/validate",(req,res)=>{
         // res.status(400).send("AGB nicht akzeptiert")
     }
     if (Object.keys(errors).length === 0){
+        data = [
+            ...data,
+            {
+                radio,
+                vorname,
+                nachname,
+                email,
+                dropdown
+            }
+        ]
+        console.log(data)
         res.send("alles ist richtig")
     } else {
         console.error(errors);
         res.status(400).send(errors);
     }
 })
+//redirecting
+function confirmInput() {
+    fname = document.forms['vorname'].fname.value;
+    alert("Hello " + fname + "! You will now be redirected to www.w3Schools.com");
+}
