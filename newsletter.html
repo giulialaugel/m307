@@ -55,54 +55,44 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <form class="needs-validation" novalidate method="post" action="http://localhost:3000/validate">
-                            <div class="form-group radio">
-
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="divers" name="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="divers">Divers</label>
+                        <form id="form"  novalidate method="post" action="http://localhost:3000/validate">
+                            <div class="form-group" id="gender">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="Divers" name="divers" value="option1">
+                                    <label class="form-check-label"> Divers</label>
                                 </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="frau" name="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="frau">Frau</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="Frau" name="frau" value="option2">
+                                    <label class="form-check-label"> Frau</label>
                                 </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="mann" name="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="mann">Mann</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="Mann" name="mann" value="option3">
+                                    <label class="form-check-label"> Herr</label>
                                 </div>
-                                <div class="valid-feedback">
-                                </div>
-                                <div class="invalid-feedback">
-                                </div>
+                                <small> Error message</small>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group width">
                                 <label for="vorname">Vorname*</label>
-                                <input type="text" class="form-control" id="vorname" minlength="2" maxlength="10" required name="vorname">
-                                <div class="invalid-feedback">
-                                    Bitte gib Deinen Vornamen ein.
-                                </div>
+                                <input type="text" id="vorname" name="vorname">
+                                <small> Error message </small>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group width">
                                 <label for="nachname">Nachnamen*</label>
-                                <input type="text" class="form-control" id="nachname" minlength="2" maxlength="15" required name="nachname">
-                                <div class="invalid-feedback">
-                                    Bitte gib Deinen Nachnamen ein.
-                                </div>
+                                <input type="text" id="nachname" name="nachname">
+                                <small> Error message</small>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group width">
                                 <label for="email">E-mail*</label>
-                                <input type="email" class="form-control" id="email" required name="email">
-                                <div class="invalid-feedback">
-                                    Bitte gib eine gültige E-mail ein.
-                                </div>
+                                <input type="email" id="email" name="email">
+                                <small> Error message</small>
                             </div>
 
                             <div class="form-group">
                                 <label>Was ist dein Lieblings Franklin® Tonic?</label>
-                                <select class="custom-select" required name="dropdown">
+                                <select class="custom-select" id="dropdown" name="dropdown">
                                     <option value="">wähle ein Getränk</option>
                                     <option value="1">brewed ginger beer</option>
                                     <option value="2">1886 cola</option>
@@ -111,24 +101,21 @@
                                     <option value="5">rosemary tonic water with black olive</option>
                                     <option value="6">sicilian lemon tonic water</option>
                                 </select>
-                                <div class="invalid-feedback">
-                                    Bitte wähle eins aus.
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="checkbox" class="form-check-input" required name="agb">
-                                <label>Ich habe die AGBs verstanden.</label>
-                                <div class="invalid-feedback">
-                                    Bitte setze einen Hacken.
-                                </div>
+                                <small> Error message</small>
                             </div>
 
-                            <button type="submit" class="btn btn-info">Submit</button>
+                            <p> <div class="form-group form-check">
+                                <input id="agb" class="form-check-input" type="checkbox" name="agb">
+                                <label class="form-check-label" >Ich habe die AGBs verstanden.</label>
+                                <small> Error message</small>
+                            </div></p>
+
+                            <button type="submit" onsubmit="validateForm()" class="btn btn-info">Submit</button>
+
                         </form>
+                        <script src="script/validate-inputs.js"></script>
                     </div>
                 </div>
-            </div>
-                <script src="script/validate-inputs.js"></script>
             </div>
             <!--platzhalter Seiten-->
             <div class="col-4"></div>

@@ -154,24 +154,66 @@ h3{
     padding-left: 50px;
 }
 /*newsletter*/
-.newsletter{
-    text-align: center;
-    color: #EEEEEE;
-    margin-top: 50px;
-    margin-bottom:50px;
-    padding-top: 50px;
-    padding-bottom:50px;
-    background-image: url("grafiken/fotos/banner.jpg");
+.container {
+    border-radius: 5px;
+    width: 500px;
 }
-.form-control{
-    margin-bottom: 20px;
+
+.form-group {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.width input{
+    width: 100%;
+}
+
+.form-group input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+
 .radio{
-    display: flex;
+    padding-bottom: 10px;
+    padding-left: 25px;
 }
-.custom-radio{
-    padding-right:100px;
+
+:root{
+    --success-color: green;
+    --error-color: red;
 }
+.form-group.success input{
+    border-color: var(--success-color);
+    width: 100%;
+}
+.form-group.error input{
+    border-color: var(--error-color);
+    width: 100%;
+}
+
+.form-group small{
+    color: var(--error-color);
+    visibility: hidden;
+}
+.form-group.error small {
+    visibility: visible;
+}
+
+
 /*gratulation*/
 .gratulation{
     margin: 100px 0 30px 0;
