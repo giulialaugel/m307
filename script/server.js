@@ -6,17 +6,13 @@ let app     = express();
 const port = process.env.PORT || 3000;
 //bodyparser modul wird benutzt
 const bodyparser = require("body-parser")
-
 const server = app.listen(port);
 console.log(`Running at Port ${port}`);
 server.timeout = 1000 * 60 * 2; // 2 minutes
-
 let data = [];
-
 //body parser
 // app.use(bodyparser.urlencoded())
 app.use(bodyparser.urlencoded({extended:true}))
-
 // Use middleware to set the default Content-Type
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -24,7 +20,6 @@ app.use(function (req, res, next) {
     res.header('Content-Type', 'application/json');
     next();
 });
-
 app.get('/data', (req, res) => {
     res.send(data)
 })
