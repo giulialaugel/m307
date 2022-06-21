@@ -55,13 +55,6 @@ function getDropdown(input){
 
 
 //gender überprüfung
-/*function getGender(input) {
-    if (input.value === ''){
-        showError(gender, 'bitte wähle eins an');
-    } else {
-        showSuccess(gender, '');
-    }
-}*/
 function getGender(div,male,female,gender){
     if (div.checked === false && male.checked === false && female.checked === false){
         showError(gender,'bitte wähle eins an');
