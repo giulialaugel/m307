@@ -50,26 +50,28 @@
             <!--platzhalter Seiten-->
             <div class="col-2"></div>
             <!--platzhalter Seiten-->
-            <div class="col-4"></div>
+            <div class="col-3"></div>
             <!--formular-->
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-8">
                         <form id="form"  novalidate method="post" action="http://localhost:3000/validate">
-                            <div class="form-group" id="gender">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="Divers" name="divers" value="option1">
-                                    <label class="form-check-label"> Divers</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="Frau" name="frau" value="option2">
-                                    <label class="form-check-label"> Frau</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="Mann" name="mann" value="option3">
-                                    <label class="form-check-label"> Herr</label>
-                                </div>
-                                <small> Error message</small>
+                            <div class="form-group">
+                                <fieldset id="geschlecht">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="diverse" name="gender" value="1">
+                                        <label>Divers</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="female" name="gender" value="2">
+                                        <label> Frau</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="male" name="gender" value="3">
+                                        <label>Mann</label>
+                                    </div>
+                                </fieldset>
+                                <small>Error message</small>
                             </div>
 
                             <div class="form-group width">
@@ -104,13 +106,14 @@
                                 <small> Error message</small>
                             </div>
 
-                            <p> <div class="form-group form-check">
+
+                            <div class="form-group form-check">
                                 <input id="agb" class="form-check-input" type="checkbox" name="agb">
                                 <label class="form-check-label" >Ich habe die AGBs verstanden.</label>
                                 <small> Error message</small>
-                            </div></p>
+                            </div>
 
-                            <button type="submit" onsubmit="validateForm()" class="btn btn-info">Submit</button>
+                            <button type="submit" class="btn btn-info">Submit</button>
 
                         </form>
                         <script src="script/validate-inputs.js"></script>
@@ -118,7 +121,7 @@
                 </div>
             </div>
             <!--platzhalter Seiten-->
-            <div class="col-4"></div>
+            <div class="col-3"></div>
         </main>
         <!--hier fängt der footer an-->
         <footer class="sticky-bottom lead">

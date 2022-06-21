@@ -154,6 +154,13 @@ h3{
     padding-left: 50px;
 }
 /*newsletter*/
+.newsletter{
+    background-image: url("grafiken/fotos/banner.jpg");
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    text-align: center;
+}
 .container {
     border-radius: 5px;
     width: 500px;
@@ -186,12 +193,6 @@ h3{
     border-color: #777;
 }
 
-
-.radio{
-    padding-bottom: 10px;
-    padding-left: 25px;
-}
-
 :root{
     --success-color: green;
     --error-color: red;
@@ -212,7 +213,10 @@ h3{
 .form-group.error small {
     visibility: visible;
 }
-
+.form-group.success small {
+    visibility: visible;
+    color: var(--success-color);
+}
 
 /*gratulation*/
 .gratulation{
