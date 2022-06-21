@@ -177,19 +177,19 @@ h3{
 
 .form-group input {
     border: 2px solid #f0f0f0;
+    width: 100%;
     border-radius: 4px;
     display: block;
     padding: 10px;
     font-size: 14px;
 }
 
-.width input{
-    width: 100%;
+.form-group #geschlecht input{
+    width: auto;
 }
 
-.form-group input:focus {
-    outline: 0;
-    border-color: #777;
+.form-group #agb input{
+    width: auto;
 }
 
 :root{
@@ -198,20 +198,20 @@ h3{
 }
 .form-group.success input{
     border-color: var(--success-color);
-    width: 100%;
 }
 .form-group.error input{
     border-color: var(--error-color);
-    width: 100%;
 }
 
 .form-group small{
     color: var(--error-color);
     visibility: hidden;
 }
+
 .form-group.error small {
     visibility: visible;
 }
+
 .form-group.success small {
     visibility: visible;
     color: var(--success-color);

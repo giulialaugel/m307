@@ -49,7 +49,7 @@ function getDropdown(input){
     if (input.value === ''){
         showError(input, 'Wähle eins aus!');
     }else if (input.value > 0){
-        showSuccess(input, 'Danke für deine Rückmeldung!');
+        showSuccess(input, 'Danke für Deine Rückmeldung!');
     }
 }
 
@@ -57,7 +57,7 @@ function getDropdown(input){
 //gender überprüfung
 function getGender(div,male,female,gender){
     if (div.checked === false && male.checked === false && female.checked === false){
-        showError(gender,'bitte wähle eins an');
+        showError(gender,'Bitte wähle eins an');
     } else {
         showSuccess(gender, '');
     }
