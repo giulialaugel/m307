@@ -4,8 +4,8 @@
   "description": "ICT-Modul_307",
   "main": "server.js",
   "scripts": {
-    "server": "node script/server.js",
-    "watch": "nodemon script/server.js"
+    "server": "node script/server/server.js",
+    "watch": "nodemon script/server/server.js"
   },
   "keywords": [
     "Mediamatiker",
